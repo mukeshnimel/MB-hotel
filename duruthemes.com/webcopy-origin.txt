@@ -1,0 +1,460 @@
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/404.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\404.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/about.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\about.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/contact.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\contact.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/animate.min.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\animate.min.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/bootstrap.min.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/close.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\close.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/datepicker.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\datepicker.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/flaticon.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\flaticon.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/magnific-popup.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\magnific-popup.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/owl.carousel.min.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\owl.carousel.min.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/owl.theme.default.min.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\owl.theme.default.min.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/select2.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\select2.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/themify-icons.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\themify-icons.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/vegas.slider.min.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\vegas.slider.min.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/plugins/YouTubePopUp.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\plugins\YouTubePopUp.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/css/style.css
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\css\style.css
+Content Type: text/css
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/facilities.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\facilities.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/faq.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\faq.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/Flaticon.eot
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\Flaticon.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/Flaticon.eot?
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\Flaticon-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/Flaticon.svg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\Flaticon.svg
+Content Type: image/svg+xml
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/Flaticon.ttf
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\Flaticon.ttf
+Content Type: font/ttf
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/Flaticon.woff
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\Flaticon.woff
+Content Type: font/woff
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/Flaticon.woff2
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\Flaticon.woff2
+Content Type: font/woff2
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/themify.eot
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\themify.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/themify.eot?
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\themify-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/themify.svg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\themify.svg
+Content Type: image/svg+xml
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/themify.ttf
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\themify.ttf
+Content Type: font/ttf
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/fonts/themify.woff
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\fonts\themify.woff
+Content Type: font/woff
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/gallery.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\gallery.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/about.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\about.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/clients/1.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\clients\1.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/clients/2.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\clients\2.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/clients/3.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\clients\3.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/clients/4.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\clients\4.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/clients/5.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\clients\5.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/clients/6.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\clients\6.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/favicon.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\favicon.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/logo-light.png
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\logo-light.png
+Content Type: image/png
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/news/1.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\news\1.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/news/2.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\news\2.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/news/3.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\news\3.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/news/4.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\news\4.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/news/5.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\news\5.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/news/6.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\news\6.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/price/bike.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\price\bike.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/price/climbing.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\price\climbing.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/price/golf.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\price\golf.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/price/hiking.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\price\hiking.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/restaurant/1.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\restaurant\1.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/restaurant/2.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\restaurant\2.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/restaurant/3.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\restaurant\3.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/rooms/01.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\rooms\01.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/rooms/02.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\rooms\02.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/rooms/03.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\rooms\03.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/rooms/04.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\rooms\04.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/rooms/05.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\rooms\05.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/rooms/06.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\rooms\06.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/signature-dark.svg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\signature-dark.svg
+Content Type: image/svg+xml
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/slider/1.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\slider\1.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/slider/2.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\slider\2.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/slider/3.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\slider\3.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/slider/4.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\slider\4.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/spa/3.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\spa\3.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/spa/4.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\spa\4.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/team/1.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\team\1.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/team/2.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\team\2.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/team/3.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\team\3.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/team/4.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\team\4.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/team/5.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\team\5.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/img/team/6.jpg
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\img\team\6.jpg
+Content Type: image/jpeg
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/index.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\index.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/index2.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\index2.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/index3.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\index3.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/index4.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\index4.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/bootstrap.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/custom.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\custom.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/datepicker.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\datepicker.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/imagesloaded.pkgd.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\imagesloaded.pkgd.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/jquery-3.6.3.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\jquery-3.6.3.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/jquery-migrate-3.0.0.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\jquery-migrate-3.0.0.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/jquery.isotope.v3.0.2.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\jquery.isotope.v3.0.2.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/jquery.magnific-popup.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\jquery.magnific-popup.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/jquery.stellar.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\jquery.stellar.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/jquery.waypoints.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\jquery.waypoints.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/modernizr-2.6.2.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\modernizr-2.6.2.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/owl.carousel.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\owl.carousel.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/pace.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\pace.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/popper.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\popper.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/scrollIt.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\scrollIt.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/select2.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\select2.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/smooth-scroll.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\smooth-scroll.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/vegas.slider.min.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\vegas.slider.min.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/js/YouTubePopUp.js
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\js\YouTubePopUp.js
+Content Type: application/javascript
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/news.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\news.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/onepage.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\onepage.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/post.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\post.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/pricing.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\pricing.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/restaurant.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\restaurant.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/room-details.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\room-details.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/rooms.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\rooms.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/services.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\services.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/spa-wellness.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\spa-wellness.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain-hotel/team.html
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain-hotel\team.html
+Content Type: text/html
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain.mp4
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain.mp4
+Content Type: video/mp4
+
+Uri: https://duruthemes.com/demo/html/cappa/mountain.webm
+File Name: D:\hotel\duruthemes.com\demo\html\cappa\mountain.webm
+Content Type: video/webm
+
+Uri: https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap
+File Name: D:\hotel\duruthemes.com\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/outfit/v14/QGYyz_MVcBeNP4NjuGObqx1XmO1I4bCyC4E.ttf
+File Name: D:\hotel\duruthemes.com\s\outfit\v14\QGYyz_MVcBeNP4NjuGObqx1XmO1I4bCyC4E.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/outfit/v14/QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyC4E.ttf
+File Name: D:\hotel\duruthemes.com\s\outfit\v14\QGYyz_MVcBeNP4NjuGObqx1XmO1I4deyC4E.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/outfit/v14/QGYyz_MVcBeNP4NjuGObqx1XmO1I4e6yC4E.ttf
+File Name: D:\hotel\duruthemes.com\s\outfit\v14\QGYyz_MVcBeNP4NjuGObqx1XmO1I4e6yC4E.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/outfit/v14/QGYyz_MVcBeNP4NjuGObqx1XmO1I4QK1C4E.ttf
+File Name: D:\hotel\duruthemes.com\s\outfit\v14\QGYyz_MVcBeNP4NjuGObqx1XmO1I4QK1C4E.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/outfit/v14/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4E.ttf
+File Name: D:\hotel\duruthemes.com\s\outfit\v14\QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4E.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/outfit/v14/QGYyz_MVcBeNP4NjuGObqx1XmO1I4W61C4E.ttf
+File Name: D:\hotel\duruthemes.com\s\outfit\v14\QGYyz_MVcBeNP4NjuGObqx1XmO1I4W61C4E.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/outfit/v14/QGYyz_MVcBeNP4NjuGObqx1XmO1I4ZmyC4E.ttf
+File Name: D:\hotel\duruthemes.com\s\outfit\v14\QGYyz_MVcBeNP4NjuGObqx1XmO1I4ZmyC4E.ttf
+Content Type: font/ttf
+

@@ -1,0 +1,1461 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>HB Hotel Management Groups</title>
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="../../../../css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Modern Branches Section */
+        .modern-branches {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .modern-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .modern-subtitle {
+            font-size: 16px;
+            color: #d4a762;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .modern-title {
+            font-size: 42px;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .modern-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #d4a762;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .modern-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .divider-line {
+            width: 60px;
+            height: 1px;
+            background: #ddd;
+            margin: 0 15px;
+        }
+
+        .divider-icon {
+            color: #d4a762;
+            font-size: 18px;
+        }
+
+        .modern-description {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .branch-tile {
+            position: relative;
+            height: 400px;
+            perspective: 1000px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .branch-tile:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .tile-front,
+        .tile-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tile-front {
+            transform: rotateY(0deg);
+            background: #fff;
+        }
+
+        .tile-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .branch-tile:hover .tile-front {
+            transform: rotateY(-180deg);
+        }
+
+        .branch-tile:hover .tile-back {
+            transform: rotateY(0deg);
+        }
+
+        .tile-image {
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+        }
+
+        .tile-content {
+            padding: 20px;
+        }
+
+        .tile-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .meta-rating {
+            color: #ffc107;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .meta-label {
+            background: #d4a762;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .branch-tile h3 {
+            font-size: 22px;
+            color: #222;
+            margin: 0 0 10px 0;
+        }
+
+        .tile-location {
+            display: flex;
+            align-items: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .tile-location i {
+            margin-right: 8px;
+            color: #d4a762;
+        }
+
+        .tile-price {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .tile-price span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .tile-price strong {
+            font-size: 20px;
+            color: #d4a762;
+            font-weight: 700;
+        }
+
+        /* Back content styles */
+        .back-content h4 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 15px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .back-content h4:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: #d4a762;
+            bottom: 0;
+            left: 0;
+        }
+
+        .back-content p {
+            color: #bbb;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tile-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+
+        .tile-features li {
+            color: #ddd;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tile-features i {
+            color: #d4a762;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .tile-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .book-btn {
+            background: #d4a762;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .book-btn:hover {
+            background: #c29552;
+            transform: translateY(-2px);
+        }
+
+        .call-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .call-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* View more button */
+        .view-more-container {
+            text-align: center;
+        }
+
+        .view-more-btn {
+            background: transparent;
+            color: #d4a762;
+            border: 2px solid #d4a762;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .view-more-btn:hover {
+            background: #d4a762;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .view-more-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .view-more-btn:hover svg {
+            transform: translateX(5px);
+        }
+
+        /* Animation classes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .branch-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .modern-title {
+                font-size: 36px;
+            }
+
+            .modern-subtitle {
+                font-size: 14px;
+                letter-spacing: 2px;
+            }
+
+            .branch-tile {
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .modern-title {
+                font-size: 30px;
+            }
+
+            .branch-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tile-actions {
+                flex-direction: column;
+            }
+        }
+
+
+
+
+        .booking-form {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+
+            /* Scroll added */
+            max-height: 350px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .booking-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0284c7;
+        }
+
+        .booking-form label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            width: 100%;
+            padding: 12px 15px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: #0284c7;
+            box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
+        }
+
+        .booking-form button {
+            margin-top: 30px;
+            width: 100%;
+            padding: 14px;
+            background: #0284c7;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .booking-form button:hover {
+            background: #0369a1;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+
+            .booking-form {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="logo" href="index.html"> <img src="img/logo-light.png" class="logo-img" alt=""> </a>
+                <!-- <a class="logo" href="index.html"> <h2>THE CAPPA <span>Mountain Hotel</span></h2> </a> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="index.html">Home
+                                </i></a>
+
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
+
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="room-details.html">Room
+                                Details </a>
+
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2>Book Your Stay</h2>
+            <form id="bookingForm">
+                <label>Name *</label>
+                <input type="text" placeholder="Enter Your Full Name" required>
+
+                <label>Email Address *</label>
+                <input type="email" placeholder="name@gmail.com" required>
+
+                <label>Phone *</label>
+                <input type="tel" placeholder="9876543210" maxlength="10" required>
+
+                <label>Check-In Date *</label>
+                <input type="date" required>
+
+                <label>Check-Out Date *</label>
+                <input type="date" required>
+
+                <label>Number of Adults *</label>
+                <input type="number" min="1" placeholder="e.g. 2" required>
+
+                <label>Number of Kids *</label>
+                <input type="number" min="0" placeholder="e.g. 1" required>
+
+                <label>Room Preference *</label>
+                <select required>
+                    <option value="">Select Room</option>
+                    <option>Deluxe Room</option>
+                    <option>Super Deluxe Room</option>
+                </select>
+
+                <label>No. of Rooms *</label>
+                <input type="number" min="1" required>
+
+                <label>Select Hotel *</label>
+                <select required>
+                    <option value="">Choose Hotel</option>
+                    <option>Hotel Sunrise</option>
+                    <option>Ocean View Resort</option>
+                    <option>Mountain Peak Inn</option>
+                </select>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Slider -->
+    <header class="header slider-fade">
+        <div class="owl-carousel owl-theme">
+            <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+            <div class="item bg-img" data-overlay-dark="5" data-background="img/slider/1.jpg">
+                <div class="v-middle caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-7 col-md-12 text-left">
+                                <h4>Premium Hospitality</h4>
+                                <h1>HB Hotel Management Groups</h1>
+                                <div class="butn-light mt-30 mb-30"> <a href="branches.html"><span>Our Hotels</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item bg-img" data-overlay-dark="5" data-background="img/slider/2.jpg">
+                <div class="v-middle caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-6 col-md-12 text-left">
+                                <h4>Comfortable Stays</h4>
+                                <h1>Luxury AC Rooms</h1>
+                                <div class="butn-light mt-30 mb-30"> <a href="rooms.html"><span>View Rooms</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item bg-img" data-overlay-dark="5" data-background="img/slider/3.jpg">
+                <div class="v-middle caption">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-6 col-md-12 text-left">
+                                <h4>Multiple Locations</h4>
+                                <h1>Across Gujarat</h1>
+                                <div class="butn-light mt-30 mb-30"> <a href="branches.html"><span>Our
+                                            Locations</span></a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About -->
+    <section class="about section-padding" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <div class="section-subtitle">Since 2010</div>
+                    <div class="section-title">HB Hotel Management Groups</div>
+                    <p>Welcome to HB Hotel Management Groups, a premier hospitality brand with presence in major cities
+                        across Gujarat including Ahmedabad, Anand, Mehsana, Sanand, Viramgam, Morbi, Vitthalapur,
+                        Hansalpur Bechraji & Patan.</p>
+                    <p>Our hotels offer the promise of memorable stays and rich experiences that will stay with you for
+                        a lifetime. Come experience our superior services and modern facilities designed for both
+                        business and leisure travelers.</p>
+                    <div class="about-bottom">
+                        <div class="about-name-wrapper">
+                            <div class="about-name">HB Group</div>
+                            <div class="about-rol">Hospitality Excellence</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <div class="img-exp">
+                        <div class="about-img">
+                            <div class="img"> <img src="img/about.jpg" class="img-fluid" alt="HB Hotel"> </div>
+                        </div>
+                        <div id="circle">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px"
+                                viewbox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                                <defs>
+                                    <path id="circlePath"
+                                        d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "></path>
+                                </defs>
+                                <circle cx="150" cy="100" r="75" fill="none"></circle>
+                                <g>
+                                    <use xlink:href="#circlePath" fill="none"></use>
+                                    <text fill="#91765a">
+                                        <textpath xlink:href="#circlePath"> . HB Hotel Management . Premium Hospitality
+                                        </textpath>
+                                    </text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Line -->
+    <div class="line-vr-section"></div>
+    <!-- Our Hotels -->
+    <!-- Modern Hotel Branches Section -->
+    <section class="modern-branches">
+        <div class="modern-container">
+            <div class="modern-header">
+                <span class="modern-subtitle">Our Exclusive Properties</span>
+                <h2 class="modern-title">HB Hotel Collection</h2>
+                <div class="modern-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon">✻</div>
+                    <div class="divider-line"></div>
+                </div>
+                <p class="modern-description">Discover our carefully curated hotel properties across Gujarat, each
+                    offering a distinct experience of comfort and luxury.</p>
+            </div>
+
+            <div class="branch-grid">
+                <!-- Mount Villa -->
+                <div class="branch-tile">
+                    <div class="tile-front">
+                        <div class="tile-image" style="background-image: url('img/branches/mount-villa.jpg');">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-meta">
+                                <span class="meta-rating">
+                                    <i class="fas fa-star"></i> 5.0
+                                </span>
+                                <span class="meta-label">Premium</span>
+                            </div>
+                            <h3>Mount Villa</h3>
+                            <div class="tile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kalambad Anand - Boltaa Road</span>
+                            </div>
+                            <div class="tile-price">
+                                <span>Starting from</span>
+                                <strong>₹2,500</strong>
+                                <span>/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-back">
+                        <div class="back-content">
+                            <h4>Mount Villa</h4>
+                            <p>Premium accommodations with luxury amenities in the heart of Anand.</p>
+                            <ul class="tile-features">
+                                <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                                <li><i class="fas fa-utensils"></i> Fine Dining</li>
+                                <li><i class="fas fa-swimming-pool"></i> Pool</li>
+                            </ul>
+                            <div class="tile-actions">
+                                <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+                                <a href="tel:+919664693607" class="call-btn">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Millennium -->
+                <div class="branch-tile">
+                    <div class="tile-front">
+                        <div class="tile-image" style="background-image: url('img/branches/millennium.jpg');">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-meta">
+                                <span class="meta-rating">
+                                    <i class="fas fa-star"></i> 5.0
+                                </span>
+                                <span class="meta-label">Business</span>
+                            </div>
+                            <h3>Hotel Millennium</h3>
+                            <div class="tile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Vidyanagar, Anand-388001</span>
+                            </div>
+                            <div class="tile-price">
+                                <span>Starting from</span>
+                                <strong>₹2,200</strong>
+                                <span>/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-back">
+                        <div class="back-content">
+                            <h4>Hotel Millennium</h4>
+                            <p>Perfect for business travelers with executive services.</p>
+                            <ul class="tile-features">
+                                <li><i class="fas fa-desktop"></i> Business Center</li>
+                                <li><i class="fas fa-concierge-bell"></i> 24/7 Service</li>
+                                <li><i class="fas fa-dumbbell"></i> Fitness</li>
+                            </ul>
+                            <div class="tile-actions">
+                                <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+                                <a href="tel:+919106454009" class="call-btn">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel A-1 -->
+                <div class="branch-tile">
+                    <div class="tile-front">
+                        <div class="tile-image" style="background-image: url('img/branches/a1.jpg');">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-meta">
+                                <span class="meta-rating">
+                                    <i class="fas fa-star"></i> 4.5
+                                </span>
+                                <span class="meta-label">Standard</span>
+                            </div>
+                            <h3>Hotel A-1</h3>
+                            <div class="tile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Vidyanagar, Anand-388121</span>
+                            </div>
+                            <div class="tile-price">
+                                <span>Starting from</span>
+                                <strong>₹1,800</strong>
+                                <span>/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-back">
+                        <div class="back-content">
+                            <h4>Hotel A-1</h4>
+                            <p>Comfortable and affordable accommodations with essential amenities.</p>
+                            <ul class="tile-features">
+                                <li><i class="fas fa-snowflake"></i> AC Rooms</li>
+                                <li><i class="fas fa-tv"></i> LED TV</li>
+                                <li><i class="fas fa-coffee"></i> Tea/Coffee</li>
+                            </ul>
+                            <div class="tile-actions">
+                                <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+                                <a href="tel:+919023584030" class="call-btn">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel My Stay -->
+                <div class="branch-tile">
+                    <div class="tile-front">
+                        <div class="tile-image" style="background-image: url('img/branches/my-stay.jpg');">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-meta">
+                                <span class="meta-rating">
+                                    <i class="fas fa-star"></i> 5.0
+                                </span>
+                                <span class="meta-label">Comfort</span>
+                            </div>
+                            <h3>Hotel My Stay</h3>
+                            <div class="tile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Anand-388001 (Gujarat)</span>
+                            </div>
+                            <div class="tile-price">
+                                <span>Starting from</span>
+                                <strong>₹2,100</strong>
+                                <span>/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-back">
+                        <div class="back-content">
+                            <h4>Hotel My Stay</h4>
+                            <p>Your home away from home with comfortable rooms.</p>
+                            <ul class="tile-features">
+                                <li><i class="fas fa-bed"></i> King Beds</li>
+                                <li><i class="fas fa-shower"></i> Hot Water</li>
+                                <li><i class="fas fa-luggage-cart"></i> Storage</li>
+                            </ul>
+                            <div class="tile-actions">
+                                <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+                                <a href="tel:+919106418560" class="call-btn">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motel Mountain -->
+                <div class="branch-tile">
+                    <div class="tile-front">
+                        <div class="tile-image" style="background-image: url('img/branches/mountain.jpg');">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-meta">
+                                <span class="meta-rating">
+                                    <i class="fas fa-star"></i> 4.0
+                                </span>
+                                <span class="meta-label">Classic</span>
+                            </div>
+                            <h3>Motel Mountain</h3>
+                            <div class="tile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Zadeshwar Road, Bharuch - 392001</span>
+                            </div>
+                            <div class="tile-price">
+                                <span>Starting from</span>
+                                <strong>₹1,900</strong>
+                                <span>/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-back">
+                        <div class="back-content">
+                            <h4>Motel Mountain</h4>
+                            <p>Classic accommodations with modern amenities.</p>
+                            <ul class="tile-features">
+                                <li><i class="fas fa-swimming-pool"></i> Pool</li>
+                                <li><i class="fas fa-spa"></i> Spa</li>
+                                <li><i class="fas fa-cocktail"></i> Bar</li>
+                            </ul>
+                            <div class="tile-actions">
+                                <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+                                <a href="tel:+917361082808" class="call-btn">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group WB -->
+                <div class="branch-tile">
+                    <div class="tile-front">
+                        <div class="tile-image" style="background-image: url('img/branches/wb.jpg');">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="tile-content">
+                            <div class="tile-meta">
+                                <span class="meta-rating">
+                                    <i class="fas fa-star"></i> 4.0
+                                </span>
+                                <span class="meta-label">Economy</span>
+                            </div>
+                            <h3>Group WB</h3>
+                            <div class="tile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Borsad, Gujarat-388540</span>
+                            </div>
+                            <div class="tile-price">
+                                <span>Starting from</span>
+                                <strong>₹1,500</strong>
+                                <span>/night</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile-back">
+                        <div class="back-content">
+                            <h4>Group WB</h4>
+                            <p>Affordable stays with essential amenities.</p>
+                            <ul class="tile-features">
+                                <li><i class="fas fa-tshirt"></i> Laundry</li>
+                                <li><i class="fas fa-car"></i> Taxi Service</li>
+                                <li><i class="fas fa-shield-alt"></i> Security</li>
+                            </ul>
+                            <div class="tile-actions">
+                                <button class="book-btn" onclick="openBookingForm()">Book Now</button>
+                                <a href="tel:+917861069909" class="call-btn">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more-container">
+                <button class="view-more-btn">
+                    View All Properties
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Rooms -->
+    <section class="rooms1 section-padding bg-darkbrown" data-scroll-index="2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 text-center">
+                    <div class="section-subtitle">HB Hotel Management</div>
+                    <div class="section-title"><span>Our Room Types</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="position-re o-hidden"> <img src="img/rooms/01.jpg" alt=""> </div> <span
+                                class="category"><a href="rooms.html">Book</a></span>
+                            <div class="con">
+                                <h6><a href="room-details.html">₹1500 / Night</a></h6>
+                                <h5><a href="room-details.html">Standard AC Room</a> </h5>
+                                <div class="row facilities">
+                                    <div class="col col-md-7">
+                                        <ul>
+                                            <li><i class="flaticon-bed"></i></li>
+                                            <li><i class="flaticon-bath"></i></li>
+                                            <li><i class="flaticon-breakfast"></i></li>
+                                            <li><i class="flaticon-towel"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-md-5 text-end">
+                                        <div class="permalink"><a href="room-details.html">Details <i
+                                                    class="ti-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="position-re o-hidden"> <img src="img/rooms/02.jpg" alt=""> </div> <span
+                                class="category"><a href="rooms.html">Book</a></span>
+                            <div class="con">
+                                <h6><a href="room-details.html">₹2000 / Night</a></h6>
+                                <h5><a href="room-details.html">Deluxe AC Room</a></h5>
+                                <div class="row facilities">
+                                    <div class="col col-md-7">
+                                        <ul>
+                                            <li><i class="flaticon-bed"></i></li>
+                                            <li><i class="flaticon-bath"></i></li>
+                                            <li><i class="flaticon-breakfast"></i></li>
+                                            <li><i class="flaticon-towel"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-md-5 text-end">
+                                        <div class="permalink"><a href="room-details.html">Details <i
+                                                    class="ti-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="position-re o-hidden"> <img src="img/rooms/03.jpg" alt=""> </div> <span
+                                class="category"><a href="rooms.html">Book</a></span>
+                            <div class="con">
+                                <h6><a href="room-details.html">₹2500 / Night</a></h6>
+                                <h5><a href="room-details.html">Executive Suite</a></h5>
+                                <div class="row facilities">
+                                    <div class="col col-md-7">
+                                        <ul>
+                                            <li><i class="flaticon-bed"></i></li>
+                                            <li><i class="flaticon-bath"></i></li>
+                                            <li><i class="flaticon-breakfast"></i></li>
+                                            <li><i class="flaticon-towel"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-md-5 text-end">
+                                        <div class="permalink"><a href="room-details.html">Details <i
+                                                    class="ti-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="position-re o-hidden"> <img src="img/rooms/04.jpg" alt=""> </div> <span
+                                class="category"><a href="rooms.html">Book</a></span>
+                            <div class="con">
+                                <h6><a href="room-details.html">₹3000 / Night</a></h6>
+                                <h5><a href="room-details.html">Family Suite</a></h5>
+                                <div class="row facilities">
+                                    <div class="col col-md-7">
+                                        <ul>
+                                            <li><i class="flaticon-bed"></i></li>
+                                            <li><i class="flaticon-bath"></i></li>
+                                            <li><i class="flaticon-breakfast"></i></li>
+                                            <li><i class="flaticon-towel"></i></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col col-md-5 text-end">
+                                        <div class="permalink"><a href="room-details.html">Details <i
+                                                    class="ti-arrow-right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Video -->
+    <section class="video-wrapper video section-padding bg-img bg-fixed" data-overlay-dark="5"
+        data-background="img/slider/2.jpg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center"> <span><i class="star-rating"></i><i class="star-rating"></i><i
+                            class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></span>
+                    <div class="section-subtitle"><span>HB Hotel Management</span></div>
+                    <div class="section-title"><span>Our Hospitality Promise</span></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <a class="vid" href="https://youtu.be/7BGNAGahig8">
+                        <div class="vid-butn"> <span class="icon"><i class="ti-control-play"></i></span> </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Facilties -->
+    <section class="facilties section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 text-center">
+                    <div class="section-subtitle">Hotel Facilities</div>
+                    <div class="section-title">Why Choose HB Hotels</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-world"></span>
+                        <h5>Prime Locations</h5>
+                        <p>Our hotels are strategically located in major cities across Gujarat for your convenience.</p>
+                        <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-car"></span>
+                        <h5>Parking Space</h5>
+                        <p>Secure parking available at all our hotel locations for guests traveling by car.</p>
+                        <div class="facility-shape"> <span class="flaticon-car"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-bed"></span>
+                        <h5>Comfortable Rooms</h5>
+                        <p>Spacious AC rooms with modern amenities for a relaxing stay.</p>
+                        <div class="facility-shape"> <span class="flaticon-bed"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-wifi"></span>
+                        <h5>High-Speed WiFi</h5>
+                        <p>Complimentary high-speed internet access throughout our properties.</p>
+                        <div class="facility-shape"> <span class="flaticon-wifi"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-breakfast"></span>
+                        <h5>Dining Options</h5>
+                        <p>Quality food service available at all our hotel locations.</p>
+                        <div class="facility-shape"> <span class="flaticon-breakfast"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-support"></span>
+                        <h5>24/7 Support</h5>
+                        <p>Round-the-clock service to ensure all your needs are met.</p>
+                        <div class="facility-shape"> <span class="flaticon-support"></span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testiominals -->
+    <section class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/4.jpg"
+        data-overlay-dark="5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-12 text-center">
+                    <div class="testimonials">
+                        <div class="testimonials-box">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item"> <span>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                    </span>
+                                    <h5>Excellent Stay!</h5>
+                                    <p>I stayed at HB Hotel's Mount Villa property and was thoroughly impressed with the
+                                        cleanliness, service, and comfort. The staff went above and beyond to make my
+                                        stay pleasant. Will definitely choose HB Hotels again for my travels in Gujarat.
+                                    </p>
+                                    <div class="info">
+                                        <div class="author-img"> <img src="img/team/1.jpg" alt=""> </div>
+                                        <div class="cont">
+                                            <h6>Rajesh Patel</h6> <span>Business Traveler</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item"> <span>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                    </span>
+                                    <h5>Comfortable and Clean</h5>
+                                    <p>Hotel Millennium provided everything I needed for my business trip. The room was
+                                        spacious, the AC worked perfectly (important in Gujarat's heat), and the
+                                        location was convenient. The staff was courteous and professional.</p>
+                                    <div class="info">
+                                        <div class="author-img"> <img src="img/team/2.jpg" alt=""> </div>
+                                        <div class="cont">
+                                            <h6>Priya Sharma</h6> <span>Corporate Executive</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item"> <span>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                    </span>
+                                    <h5>Great Value</h5>
+                                    <p>For the price, HB Hotels offer exceptional value. I've stayed at their properties
+                                        in Anand and Bharuch, and both experiences were consistently good. Clean rooms,
+                                        prompt service, and good locations make these my preferred choice in Gujarat.
+                                    </p>
+                                    <div class="info">
+                                        <div class="author-img"> <img src="img/team/3.jpg" alt=""> </div>
+                                        <div class="cont">
+                                            <h6>Vikram Mehta</h6> <span>Frequent Traveler</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Reservation & Booking Form -->
+    <section class="reservation">
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/1.jpg"
+            data-overlay-dark="5">
+            <div class="container">
+                <div class="row">
+                    <!-- Reservation -->
+                    <div class="col-lg-5 col-md-12 mb-30 mt-30">
+                        <p><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i
+                                class="star-rating"></i><i class="star-rating"></i></p>
+                        <h5>Each of our guest rooms feature private bath, AC, wi-fi, television and include
+                            complimentary services.</h5>
+                        <div class="reservations">
+                            <div class="icon color-1"><span class="flaticon-call"></span></div>
+                            <div class="text">
+                                <p class="color-1">Reservation</p> <a class="color-1" href="tel:9664693607">+91 96646
+                                    93607</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Booking From -->
+                    <div class="col-lg-5 offset-lg-2 col-md-12">
+                        <div class="booking-box">
+                            <div class="head-box text-center">
+                                <h4>Hotel Booking Form</h4>
+                            </div>
+                            <div class="booking-inner clearfix">
+                                <form class="booking-form" id="bookingForm">
+                                    <h2>Book Your Stay</h2>
+
+                                    <label>Name *</label>
+                                    <input type="text" placeholder="Enter Your Full Name" required>
+
+                                    <label>Email Address *</label>
+                                    <input type="email" placeholder="name@gmail.com" required>
+
+                                    <label>Phone *</label>
+                                    <input type="tel" placeholder="9876543210" maxlength="10" required>
+
+                                    <label>Check-In Date *</label>
+                                    <input type="date" required>
+
+                                    <label>Check-Out Date *</label>
+                                    <input type="date" required>
+
+                                    <label>Number of Adults *</label>
+                                    <input type="number" min="1" placeholder="e.g. 2" required>
+
+                                    <label>Number of Kids *</label>
+                                    <input type="number" min="0" placeholder="e.g. 1" required>
+
+                                    <label>Room Preference *</label>
+                                    <select required>
+                                        <option value="">Select Room</option>
+                                        <option>Deluxe Room</option>
+                                        <option>Super Deluxe Room</option>
+                                    </select>
+
+                                    <label>No. of Rooms *</label>
+                                    <input type="number" min="1" required>
+
+                                    <label>Select Hotel *</label>
+                                    <select required>
+                                        <option value="">Choose Hotel</option>
+                                        <option>Hotel Sunrise</option>
+                                        <option>Ocean View Resort</option>
+                                        <option>Mountain Peak Inn</option>
+                                    </select>
+
+                                    <button type="submit">Submit Booking</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients -->
+    <section class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="clients-logo">
+                            <a href="#0"><img src="img/clients/1.png" alt=""></a>
+                        </div>
+                        <div class="clients-logo">
+                            <a href="#0"><img src="img/clients/2.png" alt=""></a>
+                        </div>
+                        <div class="clients-logo">
+                            <a href="#0"><img src="img/clients/3.png" alt=""></a>
+                        </div>
+                        <div class="clients-logo">
+                            <a href="#0"><img src="img/clients/4.png" alt=""></a>
+                        </div>
+                        <div class="clients-logo">
+                            <a href="#0"><img src="img/clients/5.png" alt=""></a>
+                        </div>
+                        <div class="clients-logo">
+                            <a href="#0"><img src="img/clients/6.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-column footer-about">
+                            <h3 class="footer-title">About Hotel</h3>
+                            <p class="footer-about-text">Welcome to the best five-star deluxe hotel in New York. Hotel
+                                elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                            <div class="footer-language"> <i class="lni ti-world"></i>
+                                <select onchange="location = this.value;">
+                                    <option value="http://duruthemes.com/">English</option>
+                                    <option value="http://duruthemes.com/">German</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1">
+                        <div class="footer-column footer-explore clearfix">
+                            <h3 class="footer-title">Explore</h3>
+                            <ul class="footer-explore-list list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="rooms.html">Rooms & Suites</a></li>
+                                <li><a href="restaurant.html">Restaurant</a></li>
+                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <li><a href="about.html">About Hotel</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-column footer-contact">
+                            <h3 class="footer-title">Contact</h3>
+                            <p class="footer-contact-text">1616 Broadway NY, New York 10001
+                                <br>United States of America
+                            </p>
+                            <div class="footer-contact-info">
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span> 855 100 4444</p>
+                                <p class="footer-contact-mail">info@mountainhotel.com</p>
+                            </div>
+                            <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a
+                                    href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-youtube"></i></a>
+                                <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-bottom-inner">
+                            <p class="footer-bottom-copy-right">© Copyright 2024 by <a href="#">DuruThemes.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Intersection Observer for scroll animations
+            const tiles = document.querySelectorAll('.branch-tile');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'scale(1)';
+                        }, index * 150);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            tiles.forEach(tile => {
+                tile.style.opacity = '0';
+                tile.style.transform = 'scale(0.9)';
+                tile.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(tile);
+            });
+
+            // Add ripple effect to buttons
+            const buttons = document.querySelectorAll('.book-btn, .call-btn, .view-more-btn');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    const x = e.clientX - e.target.getBoundingClientRect().left;
+                    const y = e.clientY - e.target.getBoundingClientRect().top;
+
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple-effect';
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 1000);
+                });
+            });
+        });
+
+        function openBookingForm() {
+            // Your existing booking form function
+            console.log("Opening booking form");
+        }
+    </script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
