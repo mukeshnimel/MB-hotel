@@ -49,7 +49,7 @@ $(function () {
             logo = $(".navbar .logo> img");
         if (bodyScroll > 100) {
             navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo.png');
+            logo.attr('src', 'img/logo-light.png');
         } else {
             navbar.removeClass("nav-scroll");
             logo.attr('src', 'img/logo-light.png');
@@ -515,16 +515,16 @@ form.submit(function (e) {
 });
 
 function openBookingForm() {
-  document.getElementById("bookingModal").style.display = "flex";
+    document.getElementById("bookingModal").style.display = "flex";
 }
 
 function closeBookingForm() {
-  document.getElementById("bookingModal").style.display = "none";
+    document.getElementById("bookingModal").style.display = "none";
 }
 
 document.getElementById("bookingForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Booking request submitted successfully!");
-  closeBookingForm();
+    e.preventDefault();
+    alert("Booking request submitted successfully!");
+    closeBookingForm();
 });
 
