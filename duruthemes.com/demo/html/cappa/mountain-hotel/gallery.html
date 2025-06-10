@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>The Cappa Mountain Hotel</title>
+    <title>MB Hotel Management Groups</title>
     <link rel="shortcut icon" href="img/favicon.png">
     <link rel="stylesheet" href="../../../../css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
     <link rel="stylesheet" href="css/plugins.css">
@@ -102,9 +102,12 @@
                 <label>Select Hotel *</label>
                 <select required>
                     <option value="">Choose Hotel</option>
-                    <option>Hotel Sunrise</option>
-                    <option>Ocean View Resort</option>
-                    <option>Mountain Peak Inn</option>
+                    <option>Hotel MB Rooms</option>
+                    <option>hotel Mountain</option>
+                    <option>Hotel My Stay</option>
+                    <option>Hotel A-1</option>
+                    <option>Hotel Millennium</option>
+                    <option>Hotel Mount Villa</option>
                 </select>
 
                 <button type="submit">Submit Booking</button>
@@ -236,59 +239,52 @@
                                 <h4>Hotel Booking Form</h4>
                             </div>
                             <div class="booking-inner clearfix">
-                                <form action="rooms.html" class="form1 clearfix">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input1_wrapper">
-                                                <label>Check in</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check in">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input1_wrapper">
-                                                <label>Check out</label>
-                                                <div class="input1_inner">
-                                                    <input type="text" class="form-control input datepicker"
-                                                        placeholder="Check out">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="select1_wrapper">
-                                                <label>Adults</label>
-                                                <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Adults</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="select1_wrapper">
-                                                <label>Children</label>
-                                                <div class="select1_inner">
-                                                    <select class="select2 select" style="width: 100%">
-                                                        <option value="0">Children</option>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <button type="submit" class="btn-form1-submit mt-15">Check
-                                                Availability</button>
-                                        </div>
-                                    </div>
+                                                                <form class="booking-form" id="bookingForm">
+                                    <h2>Book Your Stay</h2>
+
+                                    <label>Name *</label>
+                                    <input type="text" placeholder="Enter Your Full Name" required>
+
+                                    <label>Email Address *</label>
+                                    <input type="email" placeholder="name@gmail.com" required>
+
+                                    <label>Phone *</label>
+                                    <input type="tel" placeholder="9876543210" maxlength="10" required>
+
+                                    <label>Check-In Date *</label>
+                                    <input type="date" required>
+
+                                    <label>Check-Out Date *</label>
+                                    <input type="date" required>
+
+                                    <label>Number of Adults *</label>
+                                    <input type="number" min="1" placeholder="e.g. 2" required>
+
+                                    <label>Number of Kids *</label>
+                                    <input type="number" min="0" placeholder="e.g. 1" required>
+
+                                    <label>Room Preference *</label>
+                                    <select required>
+                                        <option value="">Select Room</option>
+                                        <option>Deluxe Room</option>
+                                        <option>Super Deluxe Room</option>
+                                    </select>
+
+                                    <label>No. of Rooms *</label>
+                                    <input type="number" min="1" required>
+
+                                    <label>Select Hotel *</label>
+                                    <select required>
+                                        <option value="">Choose Hotel</option>
+                                        <option>Hotel MB Rooms</option>
+                                        <option>hotel Mountain</option>
+                                        <option>Hotel My Stay</option>
+                                        <option>Hotel A-1</option>
+                                        <option>Hotel Millennium</option>
+                                        <option>Hotel Mount Villa</option>
+                                    </select>
+
+                                    <button type="submit">Submit Booking</button>
                                 </form>
                             </div>
                         </div>
@@ -334,8 +330,8 @@
                     <div class="col-md-4">
                         <div class="footer-column footer-about">
                             <h3 class="footer-title">About Hotel</h3>
-                            <p class="footer-about-text">Welcome to the best five-star deluxe hotel in New York. Hotel
-                                elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
+                            <p class="footer-about-text">Welcome to the best five-star deluxe mountain retreat in Gujarat. Nestled in the serene hills, our hotel offers a peaceful escape surrounded by nature’s beauty and luxury comfort.</p>
+
                             <div class="footer-language"> <i class="lni ti-world"></i>
                                 <select onchange="location = this.value;">
                                     <option value="http://duruthemes.com/">English</option>
@@ -360,12 +356,12 @@
                     <div class="col-md-4">
                         <div class="footer-column footer-contact">
                             <h3 class="footer-title">Contact</h3>
-                            <p class="footer-contact-text">1616 Broadway NY, New York 10001
-                                <br>United States of America
+                            <p class="footer-contact-text">Gallops Food plaza, Tarapur Vasad Highway,Lakulesh Nagar Borsad
+                                <br>Gujarat-388540
                             </p>
                             <div class="footer-contact-info">
-                                <p class="footer-contact-phone"><span class="flaticon-call"></span> 855 100 4444</p>
-                                <p class="footer-contact-mail">info@mountainhotel.com</p>
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span> 86193 35086/9265677717 </p>
+                                <p class="footer-contact-mail">mbgrouphotel@gmail.com </p>
                             </div>
                             <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a
                                     href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-youtube"></i></a>
