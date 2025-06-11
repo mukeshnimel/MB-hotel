@@ -3074,7 +3074,9 @@ hr.border-2 {
     font-size: 24px;
     color: #14100c;
 }
-
+.item img{
+    height: 460px;
+}
 /* page list */
 .page-list {
     position: relative;
@@ -5919,7 +5921,7 @@ button.mfp-arrow {
 
 .footer-explore-list li a:hover {
     padding-left: 15px;
-    color: #91765a);
+    color: #91765a;
 }
 
 .footer-explore-list li a:before {
