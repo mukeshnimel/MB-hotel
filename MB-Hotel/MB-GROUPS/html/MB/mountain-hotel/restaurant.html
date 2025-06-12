@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MB Hotel Management Group</title>
+    <link rel="shortcut icon" href="img/faveicon.png">
+    <link rel="stylesheet" href="../../../../css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper">
+                <a class="logo" href="index.html"> <img src="img/logo-light.png" class="logo-img" alt=""> </a>
+                <!-- <a class="logo" href="index.html"> <h2>THE CAPPA <span>Mountain Hotel</span></h2> </a> -->
+            </div>
+            <!-- Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"><i class="ti-menu"></i></span> </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="index.html">Home
+                                </i></a>
+
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
+
+                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="room-details.html">Room
+                                Details </a>
+
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item">
+                            <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2>Book Your Stay</h2>
+            <form id="bookingForm">
+                <label>Name *</label>
+                <input type="text" placeholder="Enter Your Full Name" required>
+
+                <label>Email Address *</label>
+                <input type="email" placeholder="name@gmail.com" required>
+
+                <label>Phone *</label>
+                <input type="tel" placeholder="9876543210" maxlength="10" required>
+
+                <label>Check-In Date *</label>
+                <input type="date" required>
+
+                <label>Check-Out Date *</label>
+                <input type="date" required>
+
+                <label>Number of Adults *</label>
+                <input type="number" min="1" placeholder="e.g. 2" required>
+
+                <label>Number of Kids *</label>
+                <input type="number" min="0" placeholder="e.g. 1" required>
+
+                <label>Room Preference *</label>
+                <select required>
+                    <option value="">Select Room</option>
+                    <option>Deluxe Room</option>
+                    <option>Super Deluxe Room</option>
+                </select>
+
+                <label>No. of Rooms *</label>
+                <input type="number" min="1" required>
+
+                <label>Select Hotel *</label>
+                <select required>
+                    <option value="">Choose Hotel</option>
+                    <option>Hotel MB Rooms</option>
+                    <option>hotel Mountain</option>
+                    <option>Hotel My Stay</option>
+                    <option>Hotel A-1</option>
+                    <option>Hotel Millennium</option>
+                    <option>Hotel Mount Villa</option>
+                </select>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+    <!-- Restaurant Slider -->
+    <header class="header slider">
+        <div class="owl-carousel owl-theme">
+            <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
+            <div class="text-center item bg-img" data-overlay-dark="3" data-background="img/image-04.jpg"></div>
+            <div class="text-center item bg-img" data-overlay-dark="3" data-background="img/image-05.jpg"></div>
+            <div class="text-center item bg-img" data-overlay-dark="3" data-background="img/image-06.jpg"></div>
+        </div>
+        <!-- arrow down -->
+        <div class="arrow bounce text-center">
+            <a href="#" data-scroll-nav="1" class=""> <i class="ti-arrow-down"></i> </a>
+        </div>
+    </header>
+    <!-- Restaurant Content -->
+    <!-- <section class="rooms-page section-padding" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="section-subtitle">An Experience for the Senses</div>
+                    <div class="section-title">The Restaurant</div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <p class="mb-30">Led by Chef de Micheal Martin, The Restaurant is celebrated for its excellent
+                        cuisine and unique ambience. The gorgeous dining room features three open studio kitchens,
+                        allowing you to enjoy the sights and sounds of the culinary artistry on display. The menu
+                        showcases both Asian and European influences, with a tempting selection of classic favorites and
+                        creative dishes for you to sample. Cheese connoisseurs will be drawn to the The Wine and Cheese
+                        Cellar, housed in five-meter-high glass walls, where our knowledgeable staff can introduce you
+                        to some of Gujrat's greatest culinary treasures.</p>
+                    <h6>Hours</h6>
+                    <p>Breakfast: 7.00 am – 11.00 am (daily)</p>
+                    <p>Lunch: 12.00 noon – 2.00 pm (daily)</p>
+                    <p class="mb-30">Dinner: open from 6.30 pm, last order at 10.00 pm (daily)</p>
+                    <h6>Dress Code</h6>
+                    <p class="mb-30">Smart casual (no shorts, hats, or sandals permitted)</p>
+                    <h6>Terrace</h6>
+                    <p>Open for drinks only</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Line -->
+    <div class="line-vr-section"></div>
+    <!-- Restaurant Menu -->
+    <section class="hotel-showcase">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="showcase-header">
+                <span class="section-subtitle">Our Prestigious Properties</span>
+                <h2 class="section-title">Hotel Collection</h2>
+            </div>
+
+            <div class="hotel-container">
+                <!-- Mountain View Hotel -->
+                <div class="hotel-item">
+                    <div class="hotel-image">
+                        <img src="img/rooms/Hotel-mountain.jpeg" alt="Mountain View Hotel">
+                    </div>
+                    <div class="hotel-content">
+                        <div class="hotel-number">01</div>
+                        <div class="hotel-info">
+                            <h3 class="hotel-name">Hotel Mountain</h3>
+                            <div class="hotel-location">
+                                <i class="fas fa-map-marker-alt"></i> Rang Palace Complex,Nr.RK Cinema,Zadeshwar
+                                Road,Bharuch-392001
+                            </div>
+                            <p class="hotel-description">
+                                Perched atop the hills with panoramic views, our Mountain View Hotel offers an
+                                unparalleled luxury experience. Each suite is meticulously designed with
+                                floor-to-ceiling windows to bring the breathtaking landscape indoors.
+                            </p>
+                            <div class="hotel-features">
+                                <span class="feature-tag">Panoramic Views</span>
+                                <span class="feature-tag">Luxury Spa</span>
+                                <span class="feature-tag">Infinity Pool</span>
+                                <span class="feature-tag">5-Star Dining</span>
+                            </div>
+                             <a href="./hotel_mountain.html"> <button class="hotel-btn">Explore Property</button></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Mount Villa -->
+                <div class="hotel-item">
+                    <div class="hotel-image">
+                        <img src="img/rooms/Hotel-Mount-Villa.jpeg" alt="Hotel Mount Villa">
+                    </div>
+                    <div class="hotel-content">
+                        <div class="hotel-number">02</div>
+                        <div class="hotel-info">
+                            <h3 class="hotel-name">Hotel Mount Villa</h3>
+                            <div class="hotel-location">
+                                <i class="fas fa-map-marker-alt"></i>3RD FLOOR, BHAILABHAI COMMERCIAL COMPLEX
+                                OPP SHREE KRISHNA MEDICAL HOSPITAL, KARAMSAD ANAND-SOJITRA ROAD - KARAMSAD
+                            </div>
+                            <p class="hotel-description">
+                                A masterpiece of contemporary architecture blended with traditional elegance. Mount
+                                Villa features private villas with plunge pools, personalized butler service, and
+                                exclusive access to our championship golf course.
+                            </p>
+                            <div class="hotel-features">
+                                <span class="feature-tag">Private Villas</span>
+                                <span class="feature-tag">Golf Course</span>
+                                <span class="feature-tag">Butler Service</span>
+                                <span class="feature-tag">Wine Cellar</span>
+                            </div>
+                            <a href="./mountaine_villa_room.html"> <button class="hotel-btn">Explore Property</button></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel A-1 -->
+                <div class="hotel-item">
+                    <div class="hotel-image">
+                        <img src="img/rooms/hotel-A1.jpeg" alt="Hotel A-1">
+                    </div>
+                    <div class="hotel-content">
+                        <div class="hotel-number">03</div>
+                        <div class="hotel-info">
+                            <h3 class="hotel-name">Hotel A-1</h3>
+                            <div class="hotel-location">
+                                <i class="fas fa-map-marker-alt"></i> 1st Floor, The Hub Complex, Anand Sojitra Road,
+                                Opp. Elecone Eng. Company, Vithal, Udyognagar, Vidyanagar, Anand-388121
+                            </div>
+                            <p class="hotel-description">
+                                Designed for the modern business traveler, Hotel A-1 combines efficiency with comfort.
+                                Our state-of-the-art conference facilities, high-speed connectivity, and executive
+                                lounges make it the ideal choice for corporate stays.
+                            </p>
+                            <div class="hotel-features">
+                                <span class="feature-tag">Business Center</span>
+                                <span class="feature-tag">24/7 Concierge</span>
+                                <span class="feature-tag">Executive Lounge</span>
+                                <span class="feature-tag">High-Speed WiFi</span>
+                            </div>
+                           <a href="./mountain2.html"> <button class="hotel-btn">Explore Property</button></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel My Stay -->
+                <div class="hotel-item">
+                    <div class="hotel-image">
+                        <img src="img/rooms/Hotel-MY-stay.jpeg" alt="Hotel My Stay">
+                    </div>
+                    <div class="hotel-content">
+                        <div class="hotel-number">04</div>
+                        <div class="hotel-info">
+                            <h3 class="hotel-name">Hotel My Stay</h3>
+                            <div class="hotel-location">
+                                <i class="fas fa-map-marker-alt"></i> 4th Floor, Neptune Vidhi,
+                                Opp. Anand Laproscopy Center, 100 FT Road,
+                                Anand-388001 (Gujarat)
+                            </div>
+                            <p class="hotel-description">
+                                Your home away from home. My Stay offers cozy, apartment-style accommodations with fully
+                                equipped kitchens and living areas. Perfect for extended stays, family vacations, or
+                                anyone who appreciates extra space and privacy.
+                            </p>
+                            <div class="hotel-features">
+                                <span class="feature-tag">Apartment Living</span>
+                                <span class="feature-tag">Family Friendly</span>
+                                <span class="feature-tag">Kitchen Facilities</span>
+                                <span class="feature-tag">Laundry Service</span>
+                            </div>
+                             <a href="./mountaine_view1.html"> <button class="hotel-btn">Explore Property</button></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Mountain Bharuch -->
+                <div class="hotel-item">
+                    <div class="hotel-image">
+                        <img src="img/rooms/Hotel-MB.jpeg" alt="Hotel Mountain Bharuch">
+                    </div>
+                    <div class="hotel-content">
+                        <div class="hotel-number">05</div>
+                        <div class="hotel-info">
+                            <h3 class="hotel-name">Hotel MB Room</h3>
+                            <div class="hotel-location">
+                                <i class="fas fa-map-marker-alt"></i> Gallops Food Plaza, Tarapur Vasad Highway,
+                                Lakulesh Nagar Borsad, Gujarat-388540
+                            </div>
+                            <p class="hotel-description">
+                                A landmark of hospitality in the heart of the city. Our flagship property combines
+                                timeless elegance with modern amenities, featuring a rooftop bar with spectacular city
+                                views and an award-winning restaurant.
+                            </p>
+                            <div class="hotel-features">
+                                <span class="feature-tag">City Center</span>
+                                <span class="feature-tag">Rooftop Bar</span>
+                                <span class="feature-tag">Award-Winning Dining</span>
+                                <span class="feature-tag">Fitness Center</span>
+                            </div>
+                                     <a href="./mb_hotel.html"> <button class="hotel-btn">Explore Property</button></a>  
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel Millennium -->
+                <div class="hotel-item">
+                    <div class="hotel-image">
+                        <img src="img/rooms/hotel-millennium.jpeg" alt="Hotel Millennium">
+                    </div>
+                    <div class="hotel-content">
+                        <div class="hotel-number">06</div>
+                        <div class="hotel-info">
+                            <h3 class="hotel-name">Hotel Millennium</h3>
+                            <div class="hotel-location">
+                                <i class="fas fa-map-marker-alt"></i> 3rd Floor, Krishna Planet, Opp. Milestone Appt.,
+                                A.V. Road, Vidyanagar, Anand-388001
+                            </div>
+                            <p class="hotel-description">
+                                Where modern design meets functionality. Millennium offers sleek, tech-forward
+                                accommodations with smart room controls, ergonomic workspaces, and premium amenities for
+                                both business and leisure travelers.
+                            </p>
+                            <div class="hotel-features">
+                                <span class="feature-tag">Smart Rooms</span>
+                                <span class="feature-tag">Tech Forward</span>
+                                <span class="feature-tag">Co-Working Spaces</span>
+                                <span class="feature-tag">Wellness Center</span>
+                            </div>
+                         <a href="./hotel_millinum.html"> <button class="hotel-btn">Explore Property</button></a>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation & Booking Form -->
+    <section class="reservation">
+        <div class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/1.jpg"
+            data-overlay-dark="5">
+            <div class="container">
+                <div class="row">
+                    <!-- Reservation -->
+                    <div class="col-lg-5 col-md-12 mb-30 mt-30">
+                        <p><i class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i><i
+                                class="star-rating"></i><i class="star-rating"></i></p>
+                        <h5>Each of our guest rooms feature a private bath, wi-fi, cable television and include full
+                            breakfast.</h5>
+                        <div class="reservations">
+                            <div class="icon color-1"><span class="flaticon-call"></span></div>
+                            <div class="text">
+                                <p class="color-1">Reservation</p> <a class="color-1" href="tel:855-100-4444">855 100
+                                    4444</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Booking From -->
+                    <div class="col-lg-5 offset-lg-2 col-md-12">
+                        <div class="booking-box">
+                            <div class="head-box text-center">
+
+                                <h4>Hotel Booking Form</h4>
+                            </div>
+                            <div class="booking-inner clearfix">
+                                                                <form class="booking-form" id="bookingForm">
+                                    <h2>Book Your Stay</h2>
+
+                                    <label>Name *</label>
+                                    <input type="text" placeholder="Enter Your Full Name" required>
+
+                                    <label>Email Address *</label>
+                                    <input type="email" placeholder="name@gmail.com" required>
+
+                                    <label>Phone *</label>
+                                    <input type="tel" placeholder="9876543210" maxlength="10" required>
+
+                                    <label>Check-In Date *</label>
+                                    <input type="date" required>
+
+                                    <label>Check-Out Date *</label>
+                                    <input type="date" required>
+
+                                    <label>Number of Adults *</label>
+                                    <input type="number" min="1" placeholder="e.g. 2" required>
+
+                                    <label>Number of Kids *</label>
+                                    <input type="number" min="0" placeholder="e.g. 1" required>
+
+                                    <label>Room Preference *</label>
+                                    <select required>
+                                        <option value="">Select Room</option>
+                                        <option>Deluxe Room</option>
+                                        <option>Super Deluxe Room</option>
+                                    </select>
+
+                                    <label>No. of Rooms *</label>
+                                    <input type="number" min="1" required>
+
+                                    <label>Select Hotel *</label>
+                                    <select required>
+                                        <option value="">Choose Hotel</option>
+                                        <option>Hotel MB Rooms</option>
+                                        <option>hotel Mountain</option>
+                                        <option>Hotel My Stay</option>
+                                        <option>Hotel A-1</option>
+                                        <option>Hotel Millennium</option>
+                                        <option>Hotel Mount Villa</option>
+                                    </select>
+
+                                    <button type="submit">Submit Booking</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients -->
+    <section class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-column footer-about">
+                            <h3 class="footer-title">About Hotel</h3>
+                            <p class="footer-about-text">Welcome to the best five-star deluxe mountain retreat in
+                                Gujarat. Nestled in the serene hills, our hotel offers a peaceful escape surrounded by
+                                nature’s beauty and luxury comfort.</p>
+
+                            <div class="footer-language"> <i class="lni ti-world"></i>
+                                <select onchange="location = this.value;">
+                                    <option value="http://duruthemes.com/">English</option>
+                                    <option value="http://duruthemes.com/">German</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1">
+                        <div class="footer-column footer-explore clearfix">
+                            <h3 class="footer-title">Explore</h3>
+                            <ul class="footer-explore-list list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="rooms.html">Rooms & Suites</a></li>
+                                <li><a href="restaurant.html">Restaurant</a></li>
+                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <li><a href="about.html">About Hotel</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-column footer-contact">
+                            <h3 class="footer-title">Contact</h3>
+                            <p class="footer-contact-text">Gallops Food plaza, Tarapur Vasad Highway,Lakulesh Nagar
+                                Borsad
+                                <br>Gujarat-388540
+                            </p>
+                            <div class="footer-contact-info">
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span> 86193
+                                    35086/9265677717 </p>
+                                <p class="footer-contact-mail">mbgrouphotel@gmail.com </p>
+                            </div>
+                            <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a
+                                    href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-youtube"></i></a>
+                                <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-bottom-inner">
+                           MB Hotel Management Group<p class="footer-bottom-copy-right">© Copyright 2025 by <a href="#">MB Hotel Management Group</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Animated particles background
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                // Random size between 2px and 6px
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 10;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite, pulse ${duration / 2}s ease-in-out ${delay}s infinite`;
+
+                container.appendChild(particle);
+            }
+        }
+
+        // Intersection Observer for scroll animations
+        function setupScrollAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.hotel-item').forEach(item => {
+                observer.observe(item);
+            });
+        }
+
+
+
+        // Initialize all effects
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            setupScrollAnimations();
+            setupParallax();
+
+            // Add hover effect to buttons
+            const buttons = document.querySelectorAll('.hotel-btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.setProperty('--hover-after-opacity', '1');
+                    button.style.setProperty('--hover-after-right', '20px');
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.setProperty('--hover-after-opacity', '0');
+                    button.style.setProperty('--hover-after-right', '-20px');
+                });
+            });
+        });
+
+        function openBookingForm() {
+            // Your booking form opening logic here
+            console.log("Booking form would open now");
+            alert("Booking form would open here in a real implementation");
+        }
+    </script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

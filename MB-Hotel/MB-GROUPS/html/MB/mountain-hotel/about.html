@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MB Hotel Management Group</title>
+    <link rel="shortcut icon" href="img/faveicon.png">
+    <link rel="stylesheet" href="../../../../css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader"> <span></span> </div>
+        </div>
+    </div>
+    <!-- Progress scroll totop -->
+    <div class="progress-wrap cursor-pointer">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <div id="mobileMenu" class="mobile-slider">
+        <button class="close-btn" onclick="closeMobileMenu()">&times;</button>
+        <ul class="mobile-nav">
+            <li><a href="http://127.0.0.1:5501/MB-Hotel/index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="restaurant.html">Our Hotels</a></li>
+            <li><a href="room-details.html">Room Details</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a class="logo" href="index.html">
+                    <img src="img/logo-light.png" class="logo-img" alt="Logo">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" onclick="openMobileMenu()">
+                <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
+            </button>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="room-details.html">Room Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2>Book Your Stay</h2>
+            <form id="bookingForm">
+                <label>Name *</label>
+                <input type="text" placeholder="Enter Your Full Name" required>
+
+                <label>Email Address *</label>
+                <input type="email" placeholder="name@gmail.com" required>
+
+                <label>Phone *</label>
+                <input type="tel" placeholder="9876543210" maxlength="10" required>
+
+                <label>Check-In Date *</label>
+                <input type="date" required>
+
+                <label>Check-Out Date *</label>
+                <input type="date" required>
+
+                <label>Number of Adults *</label>
+                <input type="number" min="1" placeholder="e.g. 2" required>
+
+                <label>Number of Kids *</label>
+                <input type="number" min="0" placeholder="e.g. 1" required>
+
+                <label>Room Preference *</label>
+                <select required>
+                    <option value="">Select Room</option>
+                    <option>Deluxe Room</option>
+                    <option>Super Deluxe Room</option>
+                </select>
+
+                <label>No. of Rooms *</label>
+                <input type="number" min="1" required>
+
+                <label>Select Hotel *</label>
+                <select required>
+                    <option value="">Choose Hotel</option>
+                    <option>Hotel MB Rooms</option>
+                    <option>hotel Mountain</option>
+                    <option>Hotel My Stay</option>
+                    <option>Hotel A-1</option>
+                    <option>Hotel Millennium</option>
+                    <option>Hotel Mount Villa</option>
+                </select>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+    <!-- Header Banner -->
+    <div class="banner-header section-padding valign bg-img bg-fixed bg-position-center" data-overlay-dark="5"
+        data-background="img/slider/1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-left caption mt-90">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <section class="about section-padding" data-scroll-index="1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <!-- <div class="section-subtitle">Since 2007</div> -->
+                    <div class="section-title">A Unique Mountain Hotel</div>
+                    <p>Nestled in the breathtaking hills of Gujarat, MB Hotel Management Group offers an unparalleled retreat where luxury meets nature. Since our opening, we've been committed to providing guests with unforgettable experiences surrounded by stunning mountain vistas.</p>
+                    <p>Our hotel combines modern comforts with rustic charm, featuring handcrafted wood furnishings, stone accents, and panoramic windows that bring the outdoors in. Each element of our design has been carefully selected to complement the natural beauty of our mountain setting while ensuring your utmost comfort.</p>
+                    <div class="about-bottom"> <img src="img/signature-dark.svg" alt="" class="image about-signature">
+                        <div class="about-name-wrapper">
+                            <div class="about-name">Martin Norman</div>
+                            <div class="about-rol">General Manager</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 animate-box" data-animate-effect="fadeInUp">
+                    <div class="img-exp">
+                        <div class="about-img">
+                            <div class="img"> <img src="img/about.jpeg" class="img-fluid" alt=""> </div>
+                        </div>
+                        <div id="circle">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px"
+                                viewbox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+                                <defs>
+                                    <path id="circlePath"
+                                        d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "></path>
+                                </defs>
+                                <circle cx="150" cy="100" r="75" fill="none"></circle>
+                                <g>
+                                    <use xlink:href="#circlePath" fill="none"></use>
+                                    <text fill="#91765a">
+                                        <textpath xlink:href="#circlePath"> . the cappa . mountain hotel </textpath>
+                                    </text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Promo Video -->
+    <section class="video-wrapper video section-padding bg-img bg-fixed" data-overlay-dark="5"
+        data-background="img/slider/2.jpg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center"> <span><i class="star-rating"></i><i class="star-rating"></i><i
+                            class="star-rating"></i><i class="star-rating"></i><i class="star-rating"></i></span>
+                    <div class="section-subtitle"><span>Mountain Hotel</span></div>
+                    <div class="section-title"><span>Discover Our Retreat</span></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <a class="vid" href="https://youtu.be/7BGNAGahig8">
+                        <div class="vid-butn"> <span class="icon"><i class="ti-control-play"></i></span> </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing -->
+    <section class="pricing section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="section-subtitle"><span>Best Prices</span></div>
+                    <div class="section-title">Unforgettable Experience</div>
+                    <p>Discover our carefully curated adventure packages designed to showcase the natural beauty surrounding our mountain retreat. We offer competitive pricing for exceptional experiences that will create lasting memories.</p>
+                    <p>Our knowledgeable guides ensure your safety while helping you explore hidden trails, scenic viewpoints, and local wildlife. All equipment is provided and maintained to the highest standards.</p>
+                    <div class="reservations mb-30">
+                        <div class="icon"><span class="flaticon-call"></span></div>
+                        <div class="text">
+                            <p>Information</p> <a href="tel:855-100-4444">86193 35086/9265677717 </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="owl-carousel owl-theme">
+                        <div class="pricing-card">
+                            <div class="img"><img src="img/price/hiking.jpg" alt=""></div>
+                            <div class="desc">
+                                <div class="name">Guided Hiking</div>
+                                <div class="amount">$250<span>/ person</span></div>
+                                <ul class="list-unstyled list">
+                                    <li><i class="ti-check"></i> Half-day guided mountain hikes</li>
+                                    <li><i class="ti-check"></i> Expert local guide included</li>
+                                    <li><i class="ti-check"></i> Picnic lunch with mountain views</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pricing-card">
+                            <div class="img"><img src="img/price/bike.jpg" alt=""></div>
+                            <div class="desc">
+                                <div class="name">Mountain Biking</div>
+                                <div class="amount">$300<span>/ person</span></div>
+                                <ul class="list-unstyled list">
+                                    <li><i class="ti-check"></i> Full-suspension mountain bikes</li>
+                                    <li><i class="ti-check"></i> Trails for all skill levels</li>
+                                    <li><i class="ti-check"></i> Safety gear and instruction</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pricing-card">
+                            <div class="img"><img src="img/price/climbing.jpg" alt=""></div>
+                            <div class="desc">
+                                <div class="name">Rock Climbing</div>
+                                <div class="amount">$200<span>/ person</span></div>
+                                <ul class="list-unstyled list">
+                                    <li><i class="ti-check"></i> Beginner-friendly routes</li>
+                                    <li><i class="ti-check"></i> Certified climbing instructors</li>
+                                    <li><i class="ti-check"></i> All equipment provided</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pricing-card">
+                            <div class="img"><img src="img/price/golf.jpg" alt=""></div>
+                            <div class="desc">
+                                <div class="name">Mountain Golf</div>
+                                <div class="amount">$350<span>/ person</span></div>
+                                <ul class="list-unstyled list">
+                                    <li><i class="ti-check"></i> 9-hole mountain course</li>
+                                    <li><i class="ti-check"></i> Club rental included</li>
+                                    <li><i class="ti-check"></i> Stunning alpine views</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Line -->
+    <!-- <div class="line-vr-section"></div> -->
+    <!-- Team -->
+    <!-- <section class="team section-padding bg-darkbrown">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 text-center">
+                    <div class="section-subtitle">Meet The Team</div>
+                    <div class="section-title"><span>Our Resort Staff</span></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="img"> <img src="img/team/4.jpg" alt=""> </div>
+                        <div class="info">
+                            <h6>Valentina Karla</h6>
+                            <p>General Manager</p>
+                            <div class="social valign">
+                                <div class="full-width"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i
+                                            class="ti-twitter"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a
+                                        href="#"><i class="ti-pinterest"></i></a>
+                                    <p>valentina@hotel.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img"> <img src="img/team/1.jpg" alt=""> </div>
+                        <div class="info">
+                            <h6>Micheal White</h6>
+                            <p>Guest Service Department</p>
+                            <div class="social valign">
+                                <div class="full-width"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i
+                                            class="ti-twitter"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a
+                                        href="#"><i class="ti-pinterest"></i></a>
+                                    <p>micheal@hotel.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img"> <img src="img/team/2.jpg" alt=""> </div>
+                        <div class="info">
+                            <h6>Olivia Martin</h6>
+                            <p>Reservations Manager</p>
+                            <div class="social valign">
+                                <div class="social valign">
+                                    <div class="full-width"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i
+                                                class="ti-twitter"></i></a> <a href="#"><i class="ti-facebook"></i></a>
+                                        <a href="#"><i class="ti-pinterest"></i></a>
+                                        <p>olivia@hotel.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img"> <img src="img/team/5.jpg" alt=""> </div>
+                        <div class="info">
+                            <h6>Mariana Dana</h6>
+                            <p>F&B Manager</p>
+                            <div class="social valign">
+                                <div class="full-width"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i
+                                            class="ti-twitter"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a
+                                        href="#"><i class="ti-pinterest"></i></a>
+                                    <p>mariana@hotel.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img"> <img src="img/team/3.jpg" alt=""> </div>
+                        <div class="info">
+                            <h6>Enrico Brown</h6>
+                            <p>Head Chef</p>
+                            <div class="social valign">
+                                <div class="full-width"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i
+                                            class="ti-twitter"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a
+                                        href="#"><i class="ti-pinterest"></i></a>
+                                    <p>enrico@hotel.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img"> <img src="img/team/6.jpg" alt=""> </div>
+                        <div class="info">
+                            <h6>Victoria Dan</h6>
+                            <p>Meetings and Events Manager</p>
+                            <div class="social valign">
+                                <div class="full-width"> <a href="#"><i class="ti-instagram"></i></a> <a href="#"><i
+                                            class="ti-twitter"></i></a> <a href="#"><i class="ti-facebook"></i></a> <a
+                                        href="#"><i class="ti-pinterest"></i></a>
+                                    <p>victoria@hotel.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- Line -->
+    <div class="line-vr-section"></div>
+    <!-- Facilties -->
+    <section class="facilties section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 text-center">
+                    <div class="section-subtitle">Hotel Facilities</div>
+                    <div class="section-title">Why Choose Us</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-world"></span>
+                        <h5>Pick Up & Drop</h5>
+                        <p>Enjoy complimentary airport transfers in our luxury vehicles, ensuring a seamless start and end to your mountain getaway.</p>
+                        <div class="facility-shape"> <span class="flaticon-world"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-car"></span>
+                        <h5>Parking Space</h5>
+                        <p>Secure underground parking with valet service available 24/7 for guests arriving by private vehicle.</p>
+                        <div class="facility-shape"> <span class="flaticon-car"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-bed"></span>
+                        <h5>Room Service</h5>
+                        <p>24-hour gourmet room service featuring local specialties and international cuisine prepared by our executive chef.</p>
+                        <div class="facility-shape"> <span class="flaticon-bed"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-swimming"></span>
+                        <h5>Heated Pool</h5>
+                        <p>Year-round enjoyment in our infinity-edge heated pool overlooking the mountain range, with adjacent hot tub.</p>
+                        <div class="facility-shape"> <span class="flaticon-swimming"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-wifi"></span>
+                        <h5>High-Speed WiFi</h5>
+                        <p>Complimentary fiber-optic internet throughout the property with business center access for guests.</p>
+                        <div class="facility-shape"> <span class="flaticon-wifi"></span> </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-facility animate-box" data-animate-effect="fadeInUp"> <span
+                            class="flaticon-breakfast"></span>
+                        <h5>Gourmet Breakfast</h5>
+                        <p>Daily buffet breakfast featuring organic local produce, fresh juices, and made-to-order specialties.</p>
+                        <div class="facility-shape"> <span class="flaticon-breakfast"></span> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testiominals -->
+    <section class="background bg-img bg-fixed section-padding pb-0" data-background="img/slider/4.jpg"
+        data-overlay-dark="5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-12 text-center">
+                    <div class="testimonials">
+                        <div class="testimonials-box">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item"> <span>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                    </span>
+                                    <h5>Absolutely Magical!</h5>
+                                    <p>MB Hotel Management Group exceeded all our expectations. Waking up to panoramic mountain views from our balcony was unforgettable. The staff went above and beyond to make our anniversary special, even arranging a private dinner under the stars. The hiking guides were knowledgeable and the spa treatments were the perfect way to unwind after a day of adventure.</p>
+                                    <div class="info">
+                                        <div class="author-img"> <img src="img/team/1.jpg" alt=""> </div>
+                                        <div class="cont">
+                                            <h6>Andreas Brown</h6> <span>Honeymoon Guest</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item"> <span>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                    </span>
+                                    <h5>Perfect Mountain Retreat!</h5>
+                                    <p>As frequent travelers, we're rarely impressed, but MB Hotel Management Group is exceptional. The attention to detail in the room design, the quality of the linens, and the locally-sourced ingredients in the restaurant show their commitment to excellence. Our guided rock climbing excursion was the highlight - safe, exhilarating, and with breathtaking views. We'll definitely be returning next season!</p>
+                                    <div class="info">
+                                        <div class="author-img"> <img src="img/team/2.jpg" alt=""> </div>
+                                        <div class="cont">
+                                            <h6>Emily White</h6> <span>Adventure Enthusiast</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item"> <span>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                        <i class="star-rating"></i>
+                                    </span>
+                                    <h5>Exceptional Service!</h5>
+                                    <p>We chose The Cappa for our family reunion and couldn't have been happier. The staff accommodated our group's diverse needs perfectly - from arranging kid-friendly activities to creating special menus for dietary restrictions. The mountain biking trails were well-maintained and offered options for all skill levels. The evening campfire gatherings became our favorite family tradition during the stay.</p>
+                                    <div class="info">
+                                        <div class="author-img"> <img src="img/team/3.jpg" alt=""> </div>
+                                        <div class="cont">
+                                            <h6>Daniel Martin</h6> <span>Family Vacationer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-column footer-about">
+                            <h3 class="footer-title">About Hotel</h3>
+                            <p class="footer-about-text">Welcome to the best five-star deluxe mountain retreat in Gujarat. Nestled in the serene hills, our hotel offers a peaceful escape surrounded by nature's beauty and luxury comfort.</p>
+
+                            <div class="footer-language"> <i class="lni ti-world"></i>
+                                <select onchange="location = this.value;">
+                                    <option value="http://duruthemes.com/">English</option>
+                                    <option value="http://duruthemes.com/">German</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1">
+                        <div class="footer-column footer-explore clearfix">
+                            <h3 class="footer-title">Explore</h3>
+                            <ul class="footer-explore-list list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="rooms.html">Rooms & Suites</a></li>
+                                <li><a href="restaurant.html">Restaurant</a></li>
+                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <li><a href="about.html">About Hotel</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-column footer-contact">
+                            <h3 class="footer-title">Contact</h3>
+                            <p class="footer-contact-text">Gallops Food plaza, Tarapur Vasad Highway,Lakulesh Nagar Borsad
+                                <br>Gujarat-388540
+                            </p>
+                            <div class="footer-contact-info">
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span><a href="tel:+91 86193
+                                    35086">86193
+                                    35086</a> <a href="tel:+91 9265677717">/ 9265677717</a></p>
+                                <p class="footer-contact-mail">mbgrouphotel@gmail.com </p>
+                            </div>
+                            <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a
+                                    href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-youtube"></i></a>
+                                <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-bottom-inner">
+                           MB Hotel Management Group<p class="footer-bottom-copy-right">© Copyright 2025 by <a href="#">MB Hotel Management Group</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

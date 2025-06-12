@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Mountain View Hotel | The Cappa Mountain Hotel</title>
+    <link rel="shortcut icon" href="img/faveicon.png">
+    <link rel="stylesheet" href="../../../../css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Branch Page Specific Styles */
+        .branch-hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/clients/for-a.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .branch-hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        .branch-hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .branch-section {
+            padding: 60px 0;
+        }
+
+        .branch-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .sizing img {
+            height: 500px;
+        }
+
+        .branch-overview {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        .branch-overview-text {
+            flex: 1;
+        }
+
+        .branch-overview-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .branch-overview-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .branch-overview-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .branch-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #c19d60;
+            margin-bottom: 20px;
+        }
+
+        .rooms-section {
+            background: #f9f9f9;
+            padding: 80px 0;
+        }
+
+        .room-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .room-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .room-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .room-card:hover .room-image img {
+            transform: scale(1.1);
+        }
+
+        .room-details {
+            padding: 25px;
+        }
+
+        .room-type {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .room-price {
+            font-size: 1.2rem;
+            color: #c19d60;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .room-amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .amenity {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .branch-location {
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .location-map {
+            height: 400px;
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+          /* icon */
+        .imgg img{
+            width: 20%;
+            height: 50px;
+        }
+      
+        .body-cntn1 p{
+           font-weight: 600;
+           font-size: calc(20px + 00.1vw);
+           color: black;
+        }
+
+        .faciliti1 p{
+            color: black;
+            font-weight: 700;
+            font-size: calc(50px + 0.1vw);
+          
+          
+        }
+        .line-4 {
+            border-bottom: 2px solid red;
+            width: 8%;
+            margin: auto;  
+            border-radius: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .branch-overview {
+                flex-direction: column;
+            }
+
+            .branch-hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .room-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* new_height */
+        .new_hight {
+            height: 500px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="mobileMenu" class="mobile-slider">
+        <button class="close-btn" onclick="closeMobileMenu()">&times;</button>
+        <ul class="mobile-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="restaurant.html">Our Hotels</a></li>
+            <li><a href="room-details.html">Room Details</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><button class="btn-book" onclick="openBookingForm()">Book Your Stay</button></li>
+        </ul>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a class="logo" href="index.html">
+                    <img src="img/logo-light.png" class="logo-img" alt="Logo">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" onclick="openMobileMenu()">
+                <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
+            </button>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rooms.html">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="restaurant.html">Our Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="room-details.html">Room Details</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="nav-link btn btn-book" onclick="openBookingForm()">Book Your Stay</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Modal (same as original) -->
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeBookingForm()">&times;</span>
+            <h2>Book Your Stay</h2>
+            <form id="bookingForm">
+                <label>Name *</label>
+                <input type="text" placeholder="Enter Your Full Name" required>
+
+                <label>Email Address *</label>
+                <input type="email" placeholder="name@gmail.com" required>
+
+                <label>Phone *</label>
+                <input type="tel" placeholder="9876543210" maxlength="10" required>
+
+                <label>Check-In Date *</label>
+                <input type="date" required>
+
+                <label>Check-Out Date *</label>
+                <input type="date" required>
+
+                <label>Number of Adults *</label>
+                <input type="number" min="1" placeholder="e.g. 2" required>
+
+                <label>Number of Kids *</label>
+                <input type="number" min="0" placeholder="e.g. 1" required>
+
+                <label>Room Preference *</label>
+                <select required>
+                    <option value="">Select Room</option>
+                    <option>Deluxe Room</option>
+                    <option>Super Deluxe Room</option>
+                </select>
+
+                <label>No. of Rooms *</label>
+                <input type="number" min="1" required>
+
+                <label>Select Hotel *</label>
+                <select required>
+                    <option value="">Choose Hotel</option>
+                    <option>Hotel Sunrise</option>
+                    <option>Ocean View Resort</option>
+                    <option>Mountain Peak Inn</option>
+                </select>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Branch Hero Section -->
+    <section class="branch-hero">
+        <div class="branch-hero-content">
+            <h1>Hotel A-1</h1>
+            <p>Perched atop the hills with panoramic views, our Mountain View Hotel offers an unparalleled luxury
+                experience in Bharuch, Gujarat.</p>
+        </div>
+    </section>
+
+    <!-- Branch Overview Section -->
+    <section class="branch-section">
+        <div class="branch-container">
+            <div class="branch-overview">
+                <div class="branch-overview-text">
+                    <h2>Experience Luxury in the Mountains</h2>
+                    <p>Welcome to Mountain View Hotel, where breathtaking landscapes meet unparalleled hospitality. Our
+                        hotel is strategically located to offer you the most spectacular views of the surrounding
+                        mountain ranges, with each suite meticulously designed to bring the outdoors in through
+                        floor-to-ceiling windows.</p>
+                    <p> Mountain View Hotel has become the premier destination for those seeking
+                        tranquility, adventure, and luxury in equal measure. Our award-winning architecture blends
+                        seamlessly with the natural environment, creating a harmonious retreat from the everyday.</p>
+                    <p>Whether you're here for our world-class spa, gourmet dining, or simply to soak in the majestic
+                        views, every moment at Mountain View Hotel is designed to be unforgettable.</p>
+                </div>
+                <div class="branch-overview-image">
+                    <img src="img/rooms/hotel-A1.jpeg" alt="Mountain View Hotel Interior">
+                </div>
+            </div>
+
+           <!-- Facilities Section -->
+<div class="container">
+    <!-- Title Row -->
+    <div class="row"> 
+        <div class="col-12 text-center faciliti1">
+            <p>Facilities</p>
+            <div class="line-4"></div>
+        </div>
+    </div>
+    
+    <!-- Facilities Cards -->
+    <div class="row">
+        <!-- Row 1 -->
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Wi-Fi.png" class="img-fluid" alt="Wi-Fi">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Wi-Fi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/bathroom.png" class="img-fluid" alt="Bathroom">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Bathroom</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Bath-tub.png" class="img-fluid" alt="Bathtub">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Bathtub</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Hot-Cold-Water.png" class="img-fluid" alt="Hot/Cold Water">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Hot / Cold Water</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Docter-On-Call.png" class="img-fluid" alt="Doctor On Call">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Doctor On Call</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Hair-Dryer.png" class="img-fluid" alt="Hair Dryer">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Hair Dryer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Tea-Caffe-Maker.png" class="img-fluid" alt="Tea/Coffee Maker">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Tea / Coffee Maker</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Fire-Safety.png" class="img-fluid" alt="Fire Safety">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Fire Safety</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Split-AC.png" class="img-fluid" alt="Split AC">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Split AC</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Room-Service.png" class="img-fluid" alt="Room Service">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Room Service</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/24-X-7-Security.png" class="img-fluid" alt="24x7 Security">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">24 X 7 Security</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6 pt-5">
+            <div class="cards-1 text-center">
+                <div class="imgg">
+                    <img src="./img/clients/Safe-Parking.png" class="img-fluid" alt="Safe Parking">
+                </div>
+                <div class="body-cntn1">
+                    <p class="pt-4">Safe Parking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section class="rooms-section">
+        <div class="branch-container">
+            <div class="text-center">
+                <div class="section-subtitle">Luxury Accommodations</div>
+                <div class="section-title">Our Rooms & Suites</div>
+                <p class="mb-30">Each of our rooms is designed to maximize comfort while showcasing the breathtaking
+                    mountain views. Choose from our selection of accommodations to find your perfect retreat.</p>
+            </div>
+
+            <!-- Rooms -->
+            <section class="rooms1 section-padding" data-scroll-index="1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item">
+                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room40.jpeg" alt="">
+                                </div> <span class="category"><a href="rooms.html">Book</a></span>
+                                <div class="con">
+                                    <h6><a href="room-details.html">150$ / Night</a></h6>
+                                    <h5><a href="room-details.html">Junior Suite</a> </h5>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col col-md-5 text-end">
+                                            <div class="permalink"><a href="room-details.html">Details <i
+                                                        class="ti-arrow-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item">
+                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room41.jpeg" alt="">
+                                </div> <span class="category"><a href="rooms.html">Book</a></span>
+                                <div class="con">
+                                    <h6><a href="room-details.html">200$ / Night</a></h6>
+                                    <h5><a href="room-details.html">Family Room</a></h5>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col col-md-5 text-end">
+                                            <div class="permalink"><a href="room-details.html">Details <i
+                                                        class="ti-arrow-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item">
+                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room44.jpeg" alt="">
+                                </div> <span class="category"><a href="rooms.html">Book</a></span>
+                                <div class="con">
+                                    <h6><a href="room-details.html">250$ / Night</a></h6>
+                                    <h5><a href="room-details.html">Double Room</a></h5>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col col-md-5 text-end">
+                                            <div class="permalink"><a href="room-details.html">Details <i
+                                                        class="ti-arrow-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="item">
+                                <div class="position-re o-hidden sizing"> <img src="img/clients/card_room43.jpeg" alt="">
+                                </div> <span class="category"><a href="rooms.html">Book</a></span>
+                                <div class="con">
+                                    <h6><a href="room-details.html">300$ / Night</a></h6>
+                                    <h5><a href="room-details.html">Deluxe Room</a></h5>
+                                    <div class="row facilities">
+                                        <div class="col col-md-7">
+                                            <ul>
+                                                <li><i class="flaticon-bed"></i></li>
+                                                <li><i class="flaticon-bath"></i></li>
+                                                <li><i class="flaticon-breakfast"></i></li>
+                                                <li><i class="flaticon-towel"></i></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col col-md-5 text-end">
+                                            <div class="permalink"><a href="room-details.html">Details <i
+                                                        class="ti-arrow-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="branch-section">
+        <div class="branch-container">
+            <div class="branch-location">
+                <h2>Our Location</h2>
+                <p>Mountain View Hotel is located at the peak of Ankleshwar Hills in Bharuch, Gujarat, offering
+                    unparalleled views of the Narmada River valley. Our secluded location provides privacy and
+                    tranquility while being just 30 minutes from Bharuch city center.</p>
+
+                <div class="location-map">
+                    <!-- In a real implementation, you would embed a Google Map here -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.3424727914608!2d72.89893487815377!3d22.41613218611877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fb3ea34009871%3A0xb227a778793f0a68!2sHotel%20MB!5e0!3m2!1sen!2sin!4v1749460069068!5m2!1sen!2sin"
+                        width="1160" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="location-details" style="margin-top:30px;">
+                    <h3>Getting Here</h3>
+                    <p><strong>By Air:</strong> Nearest airport is Vadodara Airport (BDQ) - 90km away</p>
+                    <p><strong>By Train:</strong> Bharuch Junction (BH) - 15km from hotel</p>
+                    <p><strong>By Road:</strong> Well-connected by NH48 with ample parking available</p>
+                    <p>Our concierge can arrange private transfers from any arrival point.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as original) -->
+   <p class="footer-contact-phone"><span class="flaticon-call"></span><a href="tel:+91 86193
+                                    35086">86193
+                                    35086</a> <a href="tel:+91 9265677717">/ 9265677717</a></p><footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="footer-column footer-about">
+                            <h3 class="footer-title">About Hotel</h3>
+                            <p class="footer-about-text">Welcome to the best five-star deluxe mountain retreat in
+                                Gujarat. Nestled in the serene hills, our hotel offers a peaceful escape surrounded by
+                                nature’s beauty and luxury comfort.</p>
+
+                            <div class="footer-language"> <i class="lni ti-world"></i>
+                                <select onchange="location = this.value;">
+                                    <option value="http://duruthemes.com/">English</option>
+                                    <option value="http://duruthemes.com/">German</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 offset-md-1">
+                        <div class="footer-column footer-explore clearfix">
+                            <h3 class="footer-title">Explore</h3>
+                            <ul class="footer-explore-list list-unstyled">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="rooms.html">Rooms & Suites</a></li>
+                                <li><a href="restaurant.html">Restaurant</a></li>
+                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
+                                <li><a href="about.html">About Hotel</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer-column footer-contact">
+                            <h3 class="footer-title">Contact</h3>
+                            <p class="footer-contact-text">Gallops Food plaza, Tarapur Vasad Highway,Lakulesh Nagar
+                                Borsad
+                                <br>Gujarat-388540
+                            </p>
+                            <div class="footer-contact-info">
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span><a href="tel:+91 86193
+                                    35086">86193
+                                    35086</a> <a href="tel:+91 9265677717">/ 9265677717</a></p>
+                                <p class="footer-contact-mail">mbgrouphotel@gmail.com </p>
+                            </div>
+                            <div class="footer-about-social-list"> <a href="#"><i class="ti-instagram"></i></a> <a
+                                    href="#"><i class="ti-twitter"></i></a> <a href="#"><i class="ti-youtube"></i></a>
+                                <a href="#"><i class="ti-facebook"></i></a> <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-bottom-inner">
+                           MB Hotel Management Group<p class="footer-bottom-copy-right">© Copyright 2025 by <a href="#">MB Hotel Management Group</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Booking Form Functions
+        function openBookingForm() {
+            document.getElementById('bookingModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingForm() {
+            document.getElementById('bookingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target == modal) {
+                closeBookingForm();
+            }
+        }
+
+        // Form submission
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you for your booking request! We will contact you shortly to confirm your reservation.');
+            closeBookingForm();
+        });
+
+        // Font Awesome for icons
+        const faScript = document.createElement('script');
+        faScript.src = 'https://kit.fontawesome.com/a076d05399.js';
+        document.head.appendChild(faScript);
+    </script>
+    <!-- jQuery -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.v3.0.2.js"></script>
+    <script src="js/pace.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/select2.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
