@@ -45,14 +45,11 @@ $(function () {
     // Navbar scrolling background
     wind.on("scroll", function () {
         var bodyScroll = wind.scrollTop(),
-            navbar = $(".navbar"),
-            logo = $(".navbar .logo> img");
+            navbar = $(".navbar");
         if (bodyScroll > 100) {
             navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo-light.png');
         } else {
             navbar.removeClass("nav-scroll");
-            logo.attr('src', 'img/logo-light.png');
         }
     });
 
@@ -531,16 +528,16 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
 
 
 // for slider 
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('[data-background]').forEach(function (el) {
-      el.style.backgroundImage = `url(${el.getAttribute('data-background')})`;
+        el.style.backgroundImage = `url(${el.getAttribute('data-background')})`;
     });
-  });
+});
 
-  function openMobileMenu() {
+function openMobileMenu() {
     document.getElementById("mobileMenu").classList.add("active");
-  }
+}
 
-  function closeMobileMenu() {
+function closeMobileMenu() {
     document.getElementById("mobileMenu").classList.remove("active");
-  }
+}
